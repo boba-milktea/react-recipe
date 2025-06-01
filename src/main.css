@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Shrikhand&display=swap');
+@import 'tailwindcss';
+
+@theme {
+    --font-shrikhand: 'Shrikhand', serif;
+    --font-playfair: 'Playfair Display', serif;
+    --font-inter: 'Inter', sans-serif;
+    --color-sunset-orange: #ff6b35;
+    --color-warm-yellow: #ffd166;
+    --color-fresh-lime: #9ae66e;
+    --color-soft-cream: #fff8e7;
+    --color-deep-brown: #4b2e2e;
+    --color-warm-gray: #a89f91;
+}
+
+h1,
+h2 {
+    @apply font-shrikhand tracking-wider;
+}
+
+h3,
+h4,
+h5 {
+    @apply font-playfair tracking-wide;
+}
