@@ -11,7 +11,11 @@ export const pairUpIngredientMeasure = (recipe: RecipeType) => {
   for (let i = 1; i <= 20; i++) {
     const ingredient = recipe['strIngredient' + i];
     const measure = recipe['strMeasure' + i];
-    if (ingredient && ingredient.trim() !== '') {
+    if (
+      ingredient &&
+      typeof ingredient === 'string' &&
+      ingredient.trim() !== ''
+    ) {
       arr.push({ ingredient, measure });
     }
   }
