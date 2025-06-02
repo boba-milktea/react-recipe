@@ -1,7 +1,7 @@
 /**
  * Converts a youtube URL into an embeddable URL
  * @param {string} url - original youtube URL, can be an empty sting
- * @returns {string | null} - the embeddable URL or null if the URL is invalid
+ * @returns {string | null } - the embeddable URL or null if the URL is invalid
  */
 
 export const getEmbedUrl = (url?: string): string | null => {

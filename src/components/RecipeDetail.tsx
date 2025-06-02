@@ -56,7 +56,7 @@ const RecipeList = () => {
               className="mt-4 flex-grow h-100"
               allowFullScreen
               title="YouTube video"
-              src={getEmbedUrl(recipe.strYoutube)}
+              src={getEmbedUrl(recipe.strYoutube) ?? ''}
             ></iframe>
           ) : (
             <div className="flex flex-grow flex-col items-center text-center my-auto font-bold text-3xl text-sunset-orange">
