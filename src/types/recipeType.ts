@@ -5,6 +5,8 @@ export interface RecipeType {
   strInstructions: string;
   strMealThumb: string;
   strYoutube: string;
+  // dynamic keys for recipe['strIngredient' + i] and recipe['strMeasure' + i]
+  [key: string]: string | undefined;
 }
 
 export type RecipeAPIResponse = {
