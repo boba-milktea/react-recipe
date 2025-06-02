@@ -1,10 +1,10 @@
-import { useLoaderData } from 'react-router-dom';
 import RecipeList from '../components/RecipeList';
 import NoRecipe from '../components/NoRecipe';
+import { useRecipeContext } from '../hooks/useRecipeContext';
 import type { RecipeType } from '../types/recipeType';
 
-const Recipe = () => {
-  const recipes = useLoaderData();
+const MyRecipe = () => {
+  const { likedRecipes: recipes } = useRecipeContext();
 
   return (
     <>
@@ -21,4 +21,4 @@ const Recipe = () => {
   );
 };
 
-export default Recipe;
+export default MyRecipe;

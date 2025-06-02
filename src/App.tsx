@@ -1,15 +1,20 @@
-import Recipe from './pages/Recipe';
-import Error from './components/Error';
 import {
   RouterProvider,
   createBrowserRouter as Router
 } from 'react-router-dom';
-
+//components
 import Layout from './components/Layout';
+import Error from './components/Error';
 import Home from './components/Home';
-import { recipesLoader } from './loaders/recipesLoader';
 import RecipeDetail from './components/RecipeDetail';
+//pages
+import Recipe from './pages/Recipe';
+import MyRecipe from './pages/MyRecipe';
+//loaders
+import { recipesLoader } from './loaders/recipesLoader';
 import { recipeLoader } from './loaders/recipeLoader';
+//providers
+import RecipeProvider from './providers/RecipeProvider';
 
 const router = Router([
   {
@@ -28,13 +33,23 @@ const router = Router([
         element: <RecipeDetail />,
         errorElement: <Error />,
         loader: recipeLoader
+      },
+      {
+        path: '/myrecipe',
+        element: <MyRecipe />,
+        errorElement: <Error />,
+        loader: recipesLoader
       }
     ]
   }
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <RecipeProvider>
+      <RouterProvider router={router} />
+    </RecipeProvider>
+  );
 }
 
 export default App;
