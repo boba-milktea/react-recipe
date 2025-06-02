@@ -1,6 +1,6 @@
 import { FaExclamation } from 'react-icons/fa';
 import Input from './Input';
-const jumpingVeggie = '../../src/assets/food.gif';
+import jumpingVeggie from '../assets/food.gif';
 
 const Home = () => {
   return (
@@ -16,6 +16,14 @@ const Home = () => {
         src={jumpingVeggie}
         alt="vegetables jumping up and down"
       />
+      <p className="font-inter text-lg/8 text-center md:w-4/5 md:text-xl/8 xl:w-3/5 xl:text-2xl/8">
+        Not sure what to cook tonight or looking for party dish ideas? <br />
+        Just enter a keyword to explore a wide variety of recipes. <br />
+        <span className="bg-amber-200 p-2 rounded-2xl">
+          Want to be surprised?
+        </span>{' '}
+        Click "Search" without typing anything to get a random recipe!
+      </p>
       <Input />
     </div>
   );

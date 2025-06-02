@@ -24,7 +24,7 @@ const RecipeList = () => {
       {recipe && (
         <div className="flex flex-col rounded-2xl bg-amber-200 p-8 xl:flex-row md:gap-4 xl:gap-8">
           <img
-            className="rounded-xl mb-8 w-100 h-100 xl:w-md mx-auto "
+            className="rounded-xl mb-8 w-100 xl:w-md mx-auto "
             src={recipe.strMealThumb}
             alt={`image for ${recipe.strMeal}`}
           />

@@ -16,7 +16,7 @@ const router = Router([
     element: <Layout />,
     errorElement: <Error />,
     children: [
-      { path: '/', element: <Home /> },
+      { index: true, element: <Home /> },
       {
         path: '/recipe',
         element: <Recipe />,
