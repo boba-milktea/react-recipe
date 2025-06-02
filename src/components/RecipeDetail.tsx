@@ -1,11 +1,10 @@
 import { useLoaderData, useNavigate } from 'react-router-dom';
-import { getEmbedUrl } from '../utils/getEmbedUrl';
-import { pairUpIngredientMeasure } from '../utils/pairUpIngredientMeasure';
 import { FaRegArrowAltCircleLeft } from 'react-icons/fa';
 import { FcNoVideo } from 'react-icons/fc';
-import Input from './Input';
+import { getEmbedUrl } from '../utils/getEmbedUrl';
+import { pairUpIngredientMeasure } from '../utils/pairUpIngredientMeasure';
 
-const RecipeList = () => {
+const RecipeDetail = () => {
   const recipe = useLoaderData();
   const navigate = useNavigate();
 
@@ -13,7 +12,6 @@ const RecipeList = () => {
 
   return (
     <>
-      <Input />
       <button
         className="flex items-center gap-2 cursor-pointer font-inter font-bold text-xl underline py-4 hover:text-sunset-orange"
         onClick={() => navigate(-1)}
@@ -70,4 +68,4 @@ const RecipeList = () => {
   );
 };
 
-export default RecipeList;
+export default RecipeDetail;
